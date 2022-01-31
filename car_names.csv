@@ -1,0 +1,31 @@
+car_name,car_model,color_id,speed_id
+Ford,Land Cruiser,5,13
+Lexus,NSX,4,16
+Dodge,X5,15,11
+Hyundai,MAZDA6,2,10
+GMC,xA,30,4
+Lexus,Equinox,1,4
+Plymouth,NV3500 HD Cargo,30,24
+Chevrolet,Astro Cargo,18,16
+Volvo,Outback,8,16
+GMC,SL-Class,11,25
+INFINITI,Terrain,30,28
+Acura,Sonata,15,15
+Ford,SLK-Class,19,16
+Lexus,Mighty Max Regular Cab,3,23
+Cadillac,Endeavor,17,4
+Dodge,MKZ,28,17
+Bentley,Pilot,15,1
+GMC,Spacecab,28,18
+Honda,Rogue,26,20
+GMC,1500 Club Coupe,24,17
+Lexus,F350 Super Duty Crew Cab,28,22
+Mercedes-Benz,Rio,9,10
+Mercedes-Benz,QX80,13,29
+Lexus,Silhouette,3,17
+Lamborghini,Insight,21,23
+Buick,Celica,8,12
+GMC,Mercedes-AMG GT,5,2
+INFINITI,Cadenza,10,4
+Chevrolet,Cayman,4,4
+Saab,Riviera,25,5
