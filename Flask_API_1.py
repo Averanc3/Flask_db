@@ -108,10 +108,31 @@ def get_data():
         table = request.args.get('table')
         cur.execute('SELECT * FROM '+table)
         s = cur.fetchall()
-        print(s)
+        result = {}
+        fresult = []
+        if table == 'cars':
+            for i in s:
+                result = {'id' : i[0],
+                          'brand' : i[1],
+                          'model' : i[2],
+                          'color_id' : i[3],
+                          'speed_id': i[4]}
+                fresult.append(result)
+        elif table == 'car_color':
+            for i in s:
+                result = {'id' : i[0],
+                          'car_color' : i[1]}
+                fresult.append(result)
+        elif table == 'car_speed':
+            for i in s:
+                result = {'id' : i[0],
+                          'car_speed' : i[1]}
+                fresult.append(result)
+
+        print(fresult)
         conn.commit()
         cur.close()
-        return jsonify(s)
+        return jsonify(fresult)
 
 
 @app.route('/delete_data', methods = ['DELETE'])
