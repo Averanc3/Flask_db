@@ -4,9 +4,16 @@ import psycopg2
 app = Flask(__name__)
 
 
-@app.route('/first_endpoint')
+@app.route('/help')
 def first_endpoint():
-    return "You've successfully ran your first endpoint!"
+    return "This is the Flask project, connected to the educational database. \n" \
+           "Contains endpoints as such:\n" \
+           "/input_info - takes \'name\' and \'age\' params containing args. " \
+           "The output is different, depending on the method chosen (GET, POST).\n" \
+           "/db_create - Creates \'table\' in the database. Options available: car_color, car_speed, cars.\n" \
+           "/insert_data - \n" \
+           "/get_data - \n" \
+           "/delete_data - "
 
 
 @app.route('/input_info', methods=['POST', 'GET'])
