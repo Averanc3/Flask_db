@@ -12,11 +12,20 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"console.log(pm.response.text())",
+							"",
 							"pm.test(\"Enpoint returned the expected message of success in car_color creation\", function () {",
 							"    var jsonData = pm.response.text();",
 							"    pm.expect(jsonData).to.eql(\"Table car_color was successfully created\");",
 							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"lochost\", \"http://127.0.0.1:5004\")"
 						],
 						"type": "text/javascript"
 					}

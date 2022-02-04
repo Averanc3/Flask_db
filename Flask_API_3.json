@@ -250,7 +250,8 @@
 							"",
 							"",
 							"",
-							"pm.environment.unset(\"randnum2\")"
+							"pm.environment.unset(\"randnum2\")",
+							"pm.environment.unset(\"lochost\")"
 						],
 						"type": "text/javascript"
 					}
