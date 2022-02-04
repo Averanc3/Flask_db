@@ -4,7 +4,7 @@ import psycopg2
 app = Flask(__name__)
 
 
-@app.route('/help')
+@app.route('/help', methods=['GET'])
 def first_endpoint():
     return "This is the Flask project, connected to the educational database. \n" \
            "Contains endpoints as such:\n" \
@@ -96,26 +96,27 @@ def insert_data():
             speed_id = request.args.get('speed_id')
             cur.execute("""INSERT INTO cars (car_name, car_model, color_id, speed_id) VALUES (%s, %s, %s, %s)""",
                         (name, model, color_id, speed_id))
-        cur.execute('SELECT * FROM car_color')
+        cur.execute('SELECT * FROM '+table)
         s = cur.fetchall()
         print(s)
-        jcolor = {}
-        for i in s:
-            jcolor[str(i[0])] = {'color' : i[1]}
-        print(jcolor)
+        # jcolor = {}
+        # for i in s:
+        #     jcolor[str(i[0])] = {'color' : i[1]}
+        # print(jcolor)
 
         conn.commit()
         cur.close()
-        return jsonify(jcolor)
+        return jsonify(s)
 
 @app.route('/get_data', methods = ['GET'])
 def get_data():
     cur = conn.cursor()
     if conn:
         table = request.args.get('table')
-        cur.execute('SELECT * FROM '+table)
+        limit = request.args.get('limit')
+        cur.execute('SELECT * FROM '+table+' LIMIT '+limit)
         s = cur.fetchall()
-        result = {}
+
         fresult = []
         if table == 'cars':
             for i in s:
@@ -149,12 +150,22 @@ def delete_data():
     if conn:
         table = request.args.get('table')
         #if table == 'car_color':
+        # if table == 'all':
+        #     for i in ['cars', 'car_speed', 'car_color']:
+        #         cur.execute('DROP TABLE '+i)
+        #     conn.commit()
+        #     cur.close()
+        #     return 'Tables',i[0],i[1],i[2],'were successfully deleted'
         cur.execute('DROP TABLE '+table)
         # elif table == 'car_speed':
         #     cur.execute('DROP TABLE car_speed')
         # elif table == 'cars':
         #     cur.execute('DROP TABLE cars')
 
+
     conn.commit()
     cur.close()
     return 'Table '+table+' was successfully deleted'
+
+# @app.route('', methods=[''])
+# def alter_():

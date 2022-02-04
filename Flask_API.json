@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "bc27fee8-49c5-442d-b927-e82b16293252",
+		"name": "Flask_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "db_create car_color",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.text())",
+							"pm.test(\"Enpoint returned the expected message of success in car_color creation\", function () {",
+							"    var jsonData = pm.response.text();",
+							"    pm.expect(jsonData).to.eql(\"Table car_color was successfully created\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{lochost}}/db_create?create=car_color",
+					"host": [
+						"{{lochost}}"
+					],
+					"path": [
+						"db_create"
+					],
+					"query": [
+						{
+							"key": "create",
+							"value": "car_color"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "db_create car_speed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Enpoint returned the expected message of success in car_speed creation\", function () {",
+							"    var jsonData = pm.response.text();",
+							"    pm.expect(jsonData).to.eql(\"Table car_speed was successfully created\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{lochost}}/db_create?create=car_speed",
+					"host": [
+						"{{lochost}}"
+					],
+					"path": [
+						"db_create"
+					],
+					"query": [
+						{
+							"key": "create",
+							"value": "car_speed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "db_create cars",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Enpoint returned the expected message of success in cars creation\", function () {",
+							"    var jsonData = pm.response.text();",
+							"    pm.expect(jsonData).to.eql(\"Table cars was successfully created\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{lochost}}/db_create?create=cars",
+					"host": [
+						"{{lochost}}"
+					],
+					"path": [
+						"db_create"
+					],
+					"query": [
+						{
+							"key": "create",
+							"value": "cars"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert_data car_color",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(data.car_name)",
+							"console.log(data.car_model)",
+							"console.log(data.color_id)",
+							"console.log(data.speed_id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5004/insert_data?table=car_color&color=all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5004",
+					"path": [
+						"insert_data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "car_color"
+						},
+						{
+							"key": "color",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert_data car_speed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(data.car_name)",
+							"console.log(data.car_model)",
+							"console.log(data.color_id)",
+							"console.log(data.speed_id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5004/insert_data?table=car_speed&speed=all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5004",
+					"path": [
+						"insert_data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "car_speed"
+						},
+						{
+							"key": "speed",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "lochost",
+			"value": "http://127.0.0.1:5004"
+		}
+	]
+}
