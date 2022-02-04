@@ -146,15 +146,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5004/insert_data?table=car_color&color=all",
-					"protocol": "http",
+					"raw": "{{lochost}}/insert_data?table=car_color&color=all",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{lochost}}"
 					],
-					"port": "5004",
 					"path": [
 						"insert_data"
 					],
@@ -192,15 +187,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5004/insert_data?table=car_speed&speed=all",
-					"protocol": "http",
+					"raw": "{{lochost}}/insert_data?table=car_speed&speed=all",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{lochost}}"
 					],
-					"port": "5004",
 					"path": [
 						"insert_data"
 					],

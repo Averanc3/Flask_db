@@ -12,10 +12,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"console.log(data.car_name)",
-							"console.log(data.car_model)",
-							"console.log(data.color_id)",
-							"console.log(data.speed_id)"
+							"",
+							"console.log(lochost)"
 						],
 						"type": "text/javascript"
 					}
