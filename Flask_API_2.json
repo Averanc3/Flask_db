@@ -13,7 +13,7 @@
 					"script": {
 						"exec": [
 							"",
-							"console.log(lochost)"
+							""
 						],
 						"type": "text/javascript"
 					}
