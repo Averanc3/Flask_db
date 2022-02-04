@@ -48,12 +48,12 @@
 		},
 		{
 			"key": "lochost",
-			"value": "",
+			"value": "http://127.0.0.1:5004",
 			"type": "any",
 			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2022-02-04T15:15:37.139Z",
+	"_postman_exported_at": "2022-02-04T15:34:10.829Z",
 	"_postman_exported_using": "Postman/9.9.0"
 }
