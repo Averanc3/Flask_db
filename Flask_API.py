@@ -38,8 +38,8 @@ conn = psycopg2.connect(dbname='qa_ddl_25_16',
                         host='159.69.151.133',
                         port='5056')
 
-@app.route('/db_create', methods = ['POST'])
-def db_create():
+@app.route('/table_create', methods = ['POST'])
+def table_create():
     cur = conn.cursor()
 
     if conn:
