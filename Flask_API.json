@@ -35,12 +35,12 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/db_create?create=car_color",
+					"raw": "{{lochost}}/table_create?create=car_color",
 					"host": [
 						"{{lochost}}"
 					],
 					"path": [
-						"db_create"
+						"table_create"
 					],
 					"query": [
 						{
@@ -72,12 +72,12 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/db_create?create=car_speed",
+					"raw": "{{lochost}}/table_create?create=car_speed",
 					"host": [
 						"{{lochost}}"
 					],
 					"path": [
-						"db_create"
+						"table_create"
 					],
 					"query": [
 						{
@@ -109,12 +109,12 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/db_create?create=cars",
+					"raw": "{{lochost}}/table_create?create=cars",
 					"host": [
 						"{{lochost}}"
 					],
 					"path": [
-						"db_create"
+						"table_create"
 					],
 					"query": [
 						{
