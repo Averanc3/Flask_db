@@ -35,9 +35,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/table_create?create=car_color",
+					"raw": "{{serv}}/table_create?create=car_color",
 					"host": [
-						"{{lochost}}"
+						"{{serv}}"
 					],
 					"path": [
 						"table_create"
@@ -72,9 +72,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/table_create?create=car_speed",
+					"raw": "{{serv}}/table_create?create=car_speed",
 					"host": [
-						"{{lochost}}"
+						"{{serv}}"
 					],
 					"path": [
 						"table_create"
@@ -109,9 +109,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/table_create?create=cars",
+					"raw": "{{serv}}/table_create?create=cars",
 					"host": [
-						"{{lochost}}"
+						"{{serv}}"
 					],
 					"path": [
 						"table_create"
@@ -146,9 +146,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/insert_data?table=car_color&color=all",
+					"raw": "{{serv}}/insert_data?table=car_color&color=all",
 					"host": [
-						"{{lochost}}"
+						"{{serv}}"
 					],
 					"path": [
 						"insert_data"
@@ -187,9 +187,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{lochost}}/insert_data?table=car_speed&speed=all",
+					"raw": "{{serv}}/insert_data?table=car_speed&speed=all",
 					"host": [
-						"{{lochost}}"
+						"{{serv}}"
 					],
 					"path": [
 						"insert_data"
