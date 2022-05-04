@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "e569334c-b6fb-4033-858e-1313dae3f78d",
+		"name": "Flask_API_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insert_data cars",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{serv}}/insert_data?table=cars&car_name={{car_name}}&car_model={{car_model}}&color_id={{color_id}}&speed_id={{speed_id}}",
+					"host": [
+						"{{serv}}"
+					],
+					"path": [
+						"insert_data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "cars"
+						},
+						{
+							"key": "car_name",
+							"value": "{{car_name}}"
+						},
+						{
+							"key": "car_model",
+							"value": "{{car_model}}"
+						},
+						{
+							"key": "color_id",
+							"value": "{{color_id}}"
+						},
+						{
+							"key": "speed_id",
+							"value": "{{speed_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "serv",
+			"value": "http://23.88.52.139:5041",
+			"type": "string"
+		}
+	]
+}

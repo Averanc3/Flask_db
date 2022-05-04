@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "252b52ae-461e-4ed6-b51d-591c738ca15b",
+		"name": "Flask_API_Delete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete_data cars",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"pm.environment.unset(\"randnum3\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{serv}}/delete_data?table=cars",
+					"host": [
+						"{{serv}}"
+					],
+					"path": [
+						"delete_data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "cars"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_data car_color",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"",
+							"pm.environment.unset(\"randnum1\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{serv}}/delete_data?table=car_color",
+					"host": [
+						"{{serv}}"
+					],
+					"path": [
+						"delete_data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "car_color"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_data car_speed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"",
+							"pm.environment.unset(\"randnum2\")",
+							"pm.environment.unset(\"lochost\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{serv}}/delete_data?table=car_speed",
+					"host": [
+						"{{serv}}"
+					],
+					"path": [
+						"delete_data"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "car_speed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "serv",
+			"value": "http://23.88.52.139:5041",
+			"type": "string"
+		}
+	]
+}
